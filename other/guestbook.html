@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/guestbook.css">
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript" src="../js/details.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <div class="navLeft">
+            <div class="navHome" onclick="window.open('../index.html')"><i class="glyphicon glyphicon-header"
+                    style="color:red"></i>首页</div>
+            <div class="navProduct">产品展示<i class="glyphicon glyphicon-menu-right"></i>
+                <span onclick="window.open('./fig.html')">无花果干</span><span
+                    onclick="window.open('./fig.html')">生鲜无花果</span>
+            </div>
+        </div>
+        <div class="navRight">
+            <a href="#">给我留言</a>
+        </div>
+    </header>
+    <main>
+        <h1>留言板</h1>
+        <form action="">
+            <h3>留言人：</h3><br />
+            <input type="text" />
+            <br />
+            <h3>手机号码：</h3>
+            <br />
+            <input type="text" />
+            <br />
+            <h3>内容：</h3>
+            <br />
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <br />
+            <div class="btnList">
+                <button class="btn btn-primary submit">提交</button>
+                <button class="btn btn-primary reset">重置</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        《全国乡村产业发展规划（2020－2025年）》<i>&nbsp;|&nbsp;</i>“一村一品”&nbsp;示范村镇<i>&nbsp;|&nbsp;</i>“绿色.健康.纯天然”<br />
+        &copy;2022 07 01<i>&nbsp;|&nbsp;</i>联系我们：Weike.shisan@gmail.com<br />
+        协议<i>&nbsp;|&nbsp;</i>合作网站：www.baidu.com
+    </footer>
+</body>
+<script>
+    window.onload = function () {
+        $(".navProduct").mouseenter(function () {
+            $(this).css({ "overflow": "visible" })
+            $(".navProduct i").removeClass("glyphicon-menu-right").addClass("glyphicon-menu-down")
+
+        }).mouseleave(function () {
+            $(this).css({ "overflow": "hidden" })
+            $(".navProduct i").removeClass("glyphicon-menu-down").addClass("glyphicon-menu-right")
+        })
+
+        let $btn1 = $(".submit");
+        let $btn2 = $(".reset")
+        $btn1.click(function () {
+            if ($("input:eq(0)").val().trim() === '') alert("Please enter name")
+            if ($("input:eq(1)").val().trim() === '') alert("Please enter phone")
+            if ($("textarea").val().trim() === '') alert("Please enter text")
+        })
+        $btn2.on(click, function () {
+            $("input:eq(0)").val() = ''
+            $("input:eq(1)").val() = ''
+            $("textarea").val() = ''
+        })
+    }
+</script>
+
+</html>

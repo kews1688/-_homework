@@ -1,0 +1,226 @@
+body {
+    background: url(../images/背景.png) no-repeat;
+    background-size: cover;
+}
+body::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+    }
+
+/* 主题的样式 */
+main {
+    width: 1200px;
+    height: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* 导航栏样式 */
+article {
+    width: 350px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(200, 200, 200, .5);
+}
+
+/* 导航元素样式 */
+article section {
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 理念 */
+article section:nth-child(1) {
+    height: 200px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+article section:nth-child(1) div {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: green;
+    line-height: 10px;
+    font-size: 24px;
+}
+
+article section:nth-child(1) div p:hover {
+    color: red;
+    font-size: 30px;
+}
+
+/* 产品展示 */
+.product-show {
+    position: relative;
+}
+
+.product-show .left {
+    border-style: none;
+    background-color: rgba(200, 200, 200, 0);
+    position: absolute;
+    top: 50px;
+    left: 250px;
+}
+
+.hover-product:hover {
+    color: red !important;
+}
+
+/* 产品信息 */
+.product-list {
+    display: none;
+}
+
+/* 右侧样式 */
+aside {
+    width: 800px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(200, 200, 200, .5);
+}
+
+aside .rightBox {
+    width: 90%;
+    height: 95%;
+    margin: 2.5% auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* 轮播图样式 */
+.rightBox .swiper {
+    width: 596px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper img {
+    border-radius: 10px;
+}
+
+.swiper button {
+    width: 50px;
+    height: 100px;
+    opacity: 0.3;
+}
+
+/* 箭头 */
+.glyphicon-menu-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%)
+}
+
+.glyphicon-menu-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%)
+}
+
+/* 圆点 */
+.swiper .dots span {
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.dots span:nth-child(1) {
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+}
+
+.dots span:nth-child(2) {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.dots span:nth-child(3) {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.dots span:hover {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* 文本区域 */
+.rightBox .text {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text .news {
+    height: 100%;
+    border: 3px solid rgb(214, 87, 69);
+    padding: 15px
+}
+
+.text .news:nth-child(1) {
+    width: 300px;
+}
+
+.text .news:nth-child(2) {
+    width: 195px;
+}
+
+.text .news:nth-child(3) {
+    width: 160px;
+    ;
+}
+
+.news h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.news span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* 详情 */
+.details{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    left:295px;
+}
+.glyphicon-hand-right{
+    position:absolute;
+    top: 50%;
+    right:10%;
+    transform: translate(-60%,-60%)
+}
+
